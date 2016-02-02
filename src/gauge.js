@@ -52,7 +52,7 @@ class Gauge {
   }
   
   createActivities() {
-    let activities = $('#activites');
+    let activities = $('#activities');
     Activities.forEach(activity => {
       activities.append(`<li><label><input type="checkbox" data-label="${activity.name}" /> ${activity.name}</label></li>`);
     });
@@ -79,7 +79,10 @@ class Gauge {
   createPieChart() {
     return $('#pie').epoch({
       type: 'pie',
-      data: []
+      data: [{
+        label: '?',
+        value: 1
+      }]
     });
   }
   

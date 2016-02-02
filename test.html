@@ -5,31 +5,68 @@
     <title>test</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
+    <link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <style>
-      #guageChart, #pie {
-        float: left;
-        display: inline-block;
+      body {
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
       }
       
-      #pie {
-        width: 300px;
-        height: 300px;
+      .activities {
+        text-align: center;
+        overflow: auto;
       }
       
       #activities {
+        display: inline-block;
+        margin: auto;
+        text-align: left;
+        list-style: none;
+        max-width: 800px;
+        margin: 0;
+      }
+      
+      #activities li {
         float: left;
-        clear: both;
+        width: 400px;
+      }
+    
+      #pie {
+        width: 300px;
+        height: 300px;
+        margin: auto;
+      }
+      
+      #gaugeChart {
+        margin: auto;
+      }
+      
+      .half {
+        float: left;
+        display: inline-block;
+        width: 50%;
+        text-align: center;
       }
     </style>
     <script src="jspm_packages/system.js"></script>
   </head>
   <body>
-    <div id="gaugeChart" class="epoch gauge-small"></div>
-    <div id="pie" class="epoch"></div>
+    <header>
+      <h1>DevRelOMeter</h1>
+      <p>Are you practicing - or considering practicing - Developer <strong>Evangelism</strong> or <strong>Advocacy</strong>?</p>
+    </header>
+    <section class="activities">
+      <ul id="activities"></ul>
+    </section>
     
-    <ul id="activites">
-      
-    </ul>
+    <div>
+    <section class="half">
+      <div id="gaugeChart" class="epoch gauge-large"></div>
+    </section>
+    <section class="half">
+      <div id="pie" class="epoch"></div>
+    </section>
+    </div>
     
     <script src='config.js'></script>
     <script>
