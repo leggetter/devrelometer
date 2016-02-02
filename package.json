@@ -1,0 +1,35 @@
+{
+  "name": "devrelometer",
+  "version": "0.1.0",
+  "description": "Developer Relation Meter - are you doing evangelism or advocacy?",
+  "main": "config.js",
+  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "developer",
+    "relations",
+    "evangelism",
+    "advocacy",
+    "methodology"
+  ],
+  "author": "Phil Leggetter <phil@leggetter.co.uk> (http://www.leggetter.co.uk)",
+  "license": "MIT",
+  "jspm": {
+    "dependencies": {
+      "css": "github:systemjs/plugin-css@^0.1.20",
+      "d3": "npm:d3@^3.5.14",
+      "epoch-charting": "npm:epoch-charting@^0.8.4",
+      "jquery": "npm:jquery@^2.2.0"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  },
+  "devDependencies": {
+    "jspm": "^0.16.26"
+  }
+}
