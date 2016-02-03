@@ -14,7 +14,7 @@ const Activities = [
   new Activity('Run Alpha/Beta programme', ['retention', 'product']),
   new Activity('Run office hours', ['activation', 'retention']),
   new Activity('Capture developer feedback', ['retention', 'product']),
-  new Activity('Help with recruitment', ['awareness'])
+  new Activity('Help with hiring (referrals)', ['awareness'])
 ];
 
 export default Activities;
