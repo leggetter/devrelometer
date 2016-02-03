@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Developer Relation Meter - are you doing evangelism or advocacy?",
   "main": "config.js",
+  "repository": "git@github.com:leggetter/devrelometer.git",
   "dependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -26,10 +27,18 @@
     "devDependencies": {
       "babel": "npm:babel-core@^5.8.24",
       "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "clean-css": "npm:clean-css@^3.4.9",
       "core-js": "npm:core-js@^1.1.4"
     }
   },
   "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-gh-pages": "^0.5.4",
+    "gulp-html-replace": "^1.5.5",
+    "gulp-jspm": "^0.5.6",
+    "gulp-rename": "^1.2.2",
+    "gulp-sync": "^0.1.4",
+    "gulp-webserver": "^0.9.1",
     "jspm": "^0.16.26"
   }
 }

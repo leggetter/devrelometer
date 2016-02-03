@@ -6,8 +6,6 @@
     <meta name='viewport' content='width=device-width, initial-scale=1'>
 
     <link href='//fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css' />
-    <link href='./assets/css/styles.css' rel='stylesheet' type='text/css' />
-    <script src="./jspm_packages/system.js"></script>
   </head>
   <body>
     <header>
@@ -27,9 +25,12 @@
     </section>
     </div>
     
+    <!-- build:js -->
+    <script src="./jspm_packages/system.js"></script>
     <script src='./config.js'></script>
     <script>
       System.import('src/main');
     </script>
+    <!-- endbuild -->
   </body>
 </html>

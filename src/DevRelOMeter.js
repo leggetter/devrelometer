@@ -3,6 +3,7 @@ import d3 from 'd3';
 
 import epoch from 'epoch-charting';
 import 'epoch-charting/dist/css/epoch.min.css!';
+import 'assets/css/styles.css!';
 
 import Activities from 'src/Activities';
  
