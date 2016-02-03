@@ -1,7 +1,7 @@
 import Activity from './Activity';
 
 const Activities = [
-  new Activity('Write documenation', ['acquisition', 'activation', 'product']),
+  new Activity('Write documentation', ['acquisition', 'activation', 'product']),
   new Activity('Develop libraries', ['activation', 'product']),
   new Activity('Create Quickstart apps', ['activation', 'product']),
   new Activity('Write Blog posts', ['awareness', 'acquisition', 'activation', 'retention']),
