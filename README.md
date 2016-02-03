@@ -4,6 +4,10 @@ A Developer Relations Meter (DevRelOMeter) to determine if you are practicing - 
 
 ![DevRelOMeter](devrelometer.gif)
 
+## Blog post
+
+I wrote a blog post on [Defining Developer Relations](http://www.leggetter.co.uk/2016/02/03/defining-developer-relations.html) which was the inspiration for the DevRelOMeter.
+
 ## Demo
 
 https://leggetter.github.io/devrelometer/
