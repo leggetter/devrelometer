@@ -95,9 +95,12 @@ class DevRelOMeter {
     
     // Create a fake percentage to move the Gauge needle.
     // TODO: consider a better UI representation
-    let fakeGaugePercent = 0.75; // hope for advocacy
-    if(percentEvangelism > percentAdvocacy) {
+    let fakeGaugePercent = 0;
+    if(percentEvangelism >= percentAdvocacy) {
       fakeGaugePercent = 0.25;
+    }
+    else if(percentEvangelism < percentAdvocacy) {
+      fakeGaugePercent = 0.75;
     }
     
     if(fakeGaugePercent !== this._gauge.value) {
