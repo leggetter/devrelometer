@@ -5,6 +5,7 @@ const Activities = [
   new Activity('Library dev', ['activation', 'product']),
   new Activity('Quick start apps', ['activation', 'product']),
   new Activity('Blog posts', ['awareness', 'acquisition', 'activation', 'retention']),
+  new Activity('Webinars', ['awareness', 'acquisition', 'activation', 'retention']),
   new Activity('Sponsor events', ['awareness', 'acquisition']),
   new Activity('Give talks', ['awareness', 'acquisition']),
   new Activity('Answer support queries', ['activation', 'retention', 'product']),
