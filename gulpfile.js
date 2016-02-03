@@ -16,7 +16,7 @@ gulp.task('default', function() {
  
 gulp.task('build-dist', ['copy-assets'], function(){
     return gulp.src('src/main.js')
-        .pipe( gulp_jspm({selfExecutingBundle: true}) )
+        .pipe( gulp_jspm({selfExecutingBundle: true, minify: true}) )
         .pipe( rename({basename: 'devrelometer.bundle'}) )
         .pipe(gulp.dest('dist/'));
 });
