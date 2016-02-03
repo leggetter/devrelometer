@@ -6,31 +6,26 @@ import 'epoch-charting/dist/css/epoch.min.css!';
 
 import Activities from 'src/Activities';
  
+/**
+ * Developer Relations Meter
+ *
+ * Determine if the activities that are being undertaken,
+ * or that are planned to be undertaken, suggest the
+ * practition of Evangelism or Advocacy.
+ */
 class DevRelOMeter {
   constructor() {
     this.createActivities();
-    this._checkboxCount = Activities.length;
-    this._acquisitionCount = Activities.filter(a => {
-      return a.aaarrrps.indexOf('acquisition') != -1;
-    }).length;
-    
-    this.activityAAARRRPs = {};
-    Activities.forEach(act => {
-      act.aaarrrps.forEach(aaa => {
-        if(!this.activityAAARRRPs[aaa]) {
-          this.activityAAARRRPs[aaa] = 0;
-        }
-        ++this.activityAAARRRPs[aaa];
-      })
-    });
-    console.log(this.activityAAARRRPs);
     
     this._gauge = this.createGaugeChart();
     this._pie = this.createPieChart();
     
-    $('input[type=checkbox]').change(this.handleChecked.bind(this));
+    $('input[type=checkbox]').change(this.handleCheckStateChange.bind(this));
   }
   
+  /**
+   * Add the activity checkboxes to the UI.
+   */
   createActivities() {
     let activities = $('#activities');
     Activities.forEach(activity => {
@@ -38,6 +33,9 @@ class DevRelOMeter {
     });
   }
   
+  /**
+   * Create Epoch Gauge chart.
+   */
   createGaugeChart() {
     return $('#gaugeChart').epoch({
       type: 'time.gauge',
@@ -56,6 +54,9 @@ class DevRelOMeter {
     });
   }
   
+  /**
+   * Create the Epoch Pie chart.
+   */
   createPieChart() {
     return $('#pie').epoch({
       type: 'pie',
@@ -66,11 +67,15 @@ class DevRelOMeter {
     });
   }
   
-  handleChecked() {
+  /**
+   * Handle an activity checkbox check state change
+   * and update the charts.
+   */
+  handleCheckStateChange() {
     let checked = $('input[type=checkbox]:checked');
     let checkedCount = checked.length;
     
-    let aaarrrs = this.calcAaarrrCount(checked);
+    let aaarrrs = this.calcAaarrrpCount(checked);
     let pieData = [];
     Object.keys(aaarrrs).forEach(name => {
       pieData.push({label: `${name} (${aaarrrs[name]})`, value: aaarrrs[name]});
@@ -84,9 +89,11 @@ class DevRelOMeter {
     let percentEvangelism = this.getPercentFor(aaarrrs, ['awareness', 'acquisition']);
     let percentAdvocacy = this.getPercentFor(aaarrrs, ['product', 'activation', 'retention']);
     
-    console.log('Evangelism:', percentEvangelism);
-    console.log('Advocacy:', percentAdvocacy);
+    // console.log('Evangelism:', percentEvangelism);
+    // console.log('Advocacy:', percentAdvocacy);
     
+    // Create a fake percentage to move the Gauge needle.
+    // TODO: consider a better UI representation
     let fakeGaugePercent = 0.75; // hope for advocacy
     if(percentEvangelism > percentAdvocacy) {
       fakeGaugePercent = 0.25;
@@ -97,7 +104,17 @@ class DevRelOMeter {
     }
   }
   
-  calcAaarrrCount(checked) {
+  /** 
+   * Work AAARRRP indicators count based on the activities
+   * that have been selected.
+   *
+   * @param {object} checked jQuery list of checkboxes
+   *
+   * @example
+   * // returns {activation: 2, product: 2, acquisition: 1}
+   * calcAaarrrpCount(["library dev", "Writing Docs"])
+   */
+  calcAaarrrpCount(checked) {
     let aaarrrs = {};
     
     checked.each((index, input) => {
@@ -117,6 +134,14 @@ class DevRelOMeter {
     return aaarrrs;
   }
   
+  /**
+   * Based on all the AAARRRPs calculate the percentage of
+   * the total which are within the `checkedFor` array.
+   *
+   * @example
+   * // returns 0.66
+   * getPercentFor({awareness: 2, activation: 1}, ['awareness'])
+   */
   getPercentFor(aaarrrs, checkFor) {
     var total = 0;
     Object.keys(aaarrrs).forEach(ar => {
