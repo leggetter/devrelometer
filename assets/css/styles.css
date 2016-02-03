@@ -1,0 +1,40 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.activities {
+  text-align: center;
+  overflow: auto;
+}
+
+#activities {
+  display: inline-block;
+  margin: auto;
+  text-align: left;
+  list-style: none;
+  max-width: 800px;
+  margin: 0;
+}
+
+#activities li {
+  float: left;
+  width: 400px;
+}
+
+#pie {
+  width: 300px;
+  height: 300px;
+  margin: auto;
+}
+
+#gaugeChart {
+  margin: auto;
+}
+
+.half {
+  float: left;
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+}
