@@ -1,3 +1,3 @@
-import Gauge from './Gauge';
+import DevRelOMeter from './DevRelOMeter';
 
-new Gauge();
+new DevRelOMeter();

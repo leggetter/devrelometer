@@ -5,8 +5,8 @@ import epoch from 'epoch-charting';
 import 'epoch-charting/dist/css/epoch.min.css!';
 
 import Activities from 'src/Activities';
-
-class Gauge {
+ 
+class DevRelOMeter {
   constructor() {
     this.createActivities();
     this._checkboxCount = Activities.length;
@@ -134,4 +134,4 @@ class Gauge {
   
 }
 
-export default Gauge;
+export default DevRelOMeter;
