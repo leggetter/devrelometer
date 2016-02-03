@@ -1,14 +1,14 @@
-body {
+.devrelometer {
   font-family: 'Roboto', sans-serif;
   text-align: center;
 }
 
-.activities {
+.devrelometer .activities {
   text-align: center;
   overflow: auto;
 }
 
-#activities {
+.devrelometer #activities {
   display: inline-block;
   margin: auto;
   text-align: left;
@@ -17,22 +17,22 @@ body {
   margin: 0;
 }
 
-#activities li {
+.devrelometer #activities li {
   float: left;
   width: 400px;
 }
 
-#pie {
+.devrelometer #pie {
   width: 300px;
   height: 300px;
   margin: auto;
 }
 
-#gaugeChart {
+.devrelometer #gaugeChart {
   margin: auto;
 }
 
-.half {
+.devrelometer .half {
   float: left;
   display: inline-block;
   width: 50%;
